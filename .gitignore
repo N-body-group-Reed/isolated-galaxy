@@ -1,0 +1,10 @@
+#global git ignore for the repository
+#binary file for initial conditions
+*.out 
+#check point data
+*.chk*
+lastcheckpoint
+#output files
+*.log
+*.timings
+halo.0*

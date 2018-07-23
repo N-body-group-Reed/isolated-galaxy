@@ -1,0 +1,13 @@
+achInFile       = halo.out
+achOutName      = halo
+iOutInterval    = 5
+iLogInterval    = 1
+iCheckInterval  = 5
+dDelta          = 0.1
+nSteps          = 10
+dEta            = 0.3
+dTheta          = 0.5
+bDoGas          = 1
+dMsolUnit       = 2.325e5
+dKpcUnit        = 1
+dConstGamma     = 1.666667
