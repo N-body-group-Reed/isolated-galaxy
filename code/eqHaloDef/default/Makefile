@@ -1,7 +1,7 @@
 multiCmp:
-	../charmrun +p4 ../ChaNGa eqHalo.param
+	../../charmrun +p4 ../../ChaNGa eqHalo.param
 localCmp:
-	../charmrun +p4 ++local ../ChaNGa eqHalo.param
+	../../charmrun +p4 ++local ../../ChaNGa eqHalo.param
 clean:
 	rm -rf halo.000* 
 	rm -rf halo.chk0
