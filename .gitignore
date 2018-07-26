@@ -7,8 +7,11 @@ lastcheckpoint
 #output files
 *.log
 *.timings
-halo.0*
+*.000*
 charmrun
 ChaNGa
-
+#initial condition files
 *.tbin
+*.bin
+
+*.png

@@ -21,6 +21,10 @@ from pyICs.equilibrium_halos import *
 from pyICs.tools import *
 params = {'alpha': 5, 'beta': 2, 'gamma': 1, 'c': 10, 'factor': 0.1}
 
-sim = EquilibriumHalo(pars=params, fname = "halo.tbin", n_particles = 1e6)
-sim.make_halo()
-sim.finalize();
+simExp = EquilibriumHalo(pars=params, fname = "haloExp.out")
+simExp.make_halo()
+simExp.finalize();
+
+simDef = EquilibriumHalo(fname = "haloDef.out")
+simDef.make_halo()
+simDef.finalize()

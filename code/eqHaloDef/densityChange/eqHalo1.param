@@ -1,0 +1,25 @@
+# Load Balancer Options
+bPrefetch			        = 1
+bConcurrentSph			    = 1
+# IO options
+achInFile			        = haloDef.out
+achOutName      		    = haloDef
+iOutInterval    		    = 2
+iLogInterval    		    = 1
+bDoDensity                  = 1
+# Checkpoint/Restart options
+iCheckInterval  		    = 5
+# Time stepping options
+dDelta          		    = 0.1
+nSteps          		    = 100
+dEta            		    = 0.7
+dTheta          		    = 0.7
+# SPH options
+bDoGas          		    = 1
+bGasAdiabatic 			    = 1
+#bGasIsothermal			    = 1
+dMsolUnit       		    = 2.325e5
+dKpcUnit        		    = 1
+dConstGamma     		    = 1.666667
+bSphStep			        = 1
+dEtaCourant			        = 0.4
