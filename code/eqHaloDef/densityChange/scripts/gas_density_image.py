@@ -33,12 +33,17 @@ elif args.side_on:
 else:
     pass
 snap = pynbody.load(args.file)
+snapTime = pynbody.load(args.file)
 snap.physical_units()
+snapTime.physical_units('Gyr')
+viewStr = ""
 
 if face_flag:
     print(pynbody.analysis.angmom.faceon(snap))
+    viewStr="fo"
 else:
     print(pynbody.analysis.angmom.sideon(snap))
+    viewStr="so"
 
 if args.width is None: 
     width=100 
@@ -52,4 +57,5 @@ else:
 
 name=os.path.basename(args.file)
 name = name.replace(".", "_")
-pynbody.plot.image(snap.g, qty = "rho", units = "g cm^-3", width=width, cmap=cmap, filename="gd_"+cmap+"_"+os.path.basename(name))
+pynbody.plot.image(snap.g, qty = "rho", units = "g cm^-3", width=width, cmap=cmap, filename="gd_"+viewStr+"_"+cmap+"_"+os.path.basename(name), 
+                    title=snapTime.properties['time'])

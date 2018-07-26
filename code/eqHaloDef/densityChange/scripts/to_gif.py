@@ -21,7 +21,6 @@ if suffix != None:
 
 with imageio.get_writer("../images/"+args.basename+"/"+basename+".gif", 
                         mode='I', duration=0.3) as writer:
-    print("here")
     filenames = []
     for (dirpath, dirnames, fnames) in walk("../images/"+args.basename):
         filenames.extend(fnames)
