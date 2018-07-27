@@ -1,0 +1,38 @@
+# Load Balancer Options
+bPrefetch			        = 1
+bConcurrentSph			    = 1
+# Time stepping options
+dDelta          		    = 0.1
+nSteps          		    = 100
+dEta            		    = 0.5
+# Force Accuracy Options
+dTheta          		    = 0.5
+bDoGravity                  = 1
+# SPH options
+bDoGas          		    = 1
+bGasAdiabatic 			    = 1
+#bGasIsothermal			    = 1
+dMsolUnit       		    = 2.325e5
+dKpcUnit        		    = 1
+dConstGamma     		    = 1.666667
+# SPH Time stepping
+bSphStep			        = 2
+dEtaCourant			        = 0.4
+# IO options
+achInFile			        = haloHrn.out
+achOutName      		    = haloHrn
+iOutInterval    		    = 2
+iLogInterval    		    = 2
+bDoDensity                  = 1
+# Checkpoint/Restart options
+iCheckInterval  		    = 10
+# Movie making test
+dDumpFrameTime              = 1
+dDumpFrameStep              = 5 
+bLiveViz                    = 0
+# Grow Mass Options
+bDynGrowMass			    = 1
+nGrowMass			        = 1e5
+dGrowDeltaM			        = 10
+dGrowStartT			        = 0
+dGrowEndT			        = 50

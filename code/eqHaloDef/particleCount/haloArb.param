@@ -7,7 +7,7 @@ nSteps          		    = 100
 dEta            		    = 0.5
 # Force Accuracy Options
 dTheta          		    = 0.5
-bDoGravity              = 1
+bDoGravity                  = 1
 # SPH options
 bDoGas          		    = 1
 bGasAdiabatic 			    = 1
@@ -19,8 +19,8 @@ dConstGamma     		    = 1.666667
 bSphStep			        = 2
 dEtaCourant			        = 0.4
 # IO options
-achInFile			        = halo.out
-achOutName      		    = halo2
+achInFile			        = haloArb.out
+achOutName      		    = haloArb
 iOutInterval    		    = 2
 iLogInterval    		    = 2
 bDoDensity                  = 1
