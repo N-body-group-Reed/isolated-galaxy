@@ -12,7 +12,7 @@ import os
 
 parser = argparse.ArgumentParser(description="Pass a file path to generate a gas density image.")
 parser.add_argument("-f", "--file", dest="file", 
-                    help = "Pass specified file to find gas density image.  Will display first halo unless" + 
+                    help = "Pass specified file to find gas temperature image.  Will display first halo unless" + 
                     "specified otherwise")
 parser.add_argument("-fo", "--face_on", action="store_true",
                     help = "Visualize face-on perspective (default).")
@@ -57,6 +57,6 @@ else:
 
 name=os.path.basename(args.file)
 name = name.replace(".", "_")
-pynbody.plot.image(snap.g, qty = "rho", units = "g cm^-3", width=width, cmap=cmap,
-                   filename="gd_"+viewStr+"_"+cmap+"_"+os.path.basename(name),
+pynbody.plot.image(snap.g, qty = "temp", width=width, cmap=cmap,
+                   filename="tp_"+viewStr+"_"+cmap+"_"+os.path.basename(name),
                    title=snapTime.properties['time'])

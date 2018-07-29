@@ -34,8 +34,8 @@ while [ "$1" != "" ]; do
     esac
     shift
 done
-mkdir -p ../images/$basename/gas_density
-prefix="gd_${view:1}"_"$color"
+mkdir -p ../images/$basename/gas_temperature
+prefix="tp_${view:1}"_"$color"
 for file in ../$basename.*
 do
     case $file in *.den)        continue;; esac
@@ -45,7 +45,7 @@ do
     case $file in *.out)        continue;; esac
     case $file in *.timings)    continue;; esac
     
-    python3.7 gas_density_image.py -f $file $view -c "$color" -w "$width"
-    mv "$prefix"_"$basename"* ../images/$basename/gas_density
+    python3.7 gas_temperature_image.py -f $file $view -c "$color" -w "$width"
+    mv "$prefix"_"$basename"* ../images/$basename/gas_temperature
 done
-python3.7 to_gif.py $basename -p "$prefix" -m gas_density
+python3.7 to_gif.py $basename -p "$prefix" -m gas_temperature
