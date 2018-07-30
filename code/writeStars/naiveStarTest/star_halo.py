@@ -4,7 +4,7 @@ import sys
 import time
 from pyICs import am_profiles, density_profiles, tools
 from pynbody import array, new, snapshot, units
-from pynbody import tipsy
+from pynbody import tipsy, gadget, nchilada, ramses, grafic
 
 # First add stars
 # Then add in dark matter
@@ -46,12 +46,13 @@ class StarHalo:
         self.__x_rho = np.logspace(self.__logxmin_rho, self.__logxmax_rho, self.__n_sample_rho)
         self.__do_velocities = kwargs.get('do_velocities', True)
         self.__gas = kwargs.get('gas', False)
-        if 'snap' in kwargs.keys():
-            self.sim = kwargs['snap']
-        elif self.__gas:
-            self.sim = snapshot.new(gas=self.__n_particles)
-        else:
-            self.sim = snapshot.new(star = self.__n_particles)
+        self.__type = {'gadget': gadget.GadgetSnap,
+                        'grafic': grafic.GrafICSnap,
+                        'nchilada': nchilada.NchiladaSnap,
+                        'ramses': ramses.RamsesSnap,
+                        'tipsy': tipsy.TipsySnap}[kwargs.get('type', 'tipsy')]
+        self.__fname = kwargs.get('fname', 'halo.out')
+        self.sim = snapshot.new(star = self.__n_particles)
 
     def __mass(self, x):
         """Calculate enclosed mass in spherical shells"""
@@ -226,7 +227,7 @@ class StarHalo:
         self.__calc_mc()
         self.__vel_fac = (units.G*self.__m_vir/self.__mc/self.__r_s)**(1,2)
 
-    def sample_equilibrium_halo(self):
+    def make_halo(self):
         """This method actually creates the halo"""
         start = time.clock()
         print('StarHalo: setting positions ...'),
@@ -264,4 +265,8 @@ class StarHalo:
 
     def finalize(self):
         self.sim.properties['a'] = 0. # This is necessarry in order to set the time to 0
+        self.sim.properties['time'] = 0
         self.sim.physical_units(mass='2.325e5 Msol')
+        print(self.__fname)
+        print(self.__type)
+        self.sim.write(self.__type, self.__fname)

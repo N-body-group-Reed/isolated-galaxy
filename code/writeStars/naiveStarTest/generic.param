@@ -1,0 +1,13 @@
+# IO options
+achInFile			        = starHalo.out
+achOutName      		    = starHalo
+iOutInterval    		    = 4
+iLogInterval    		    = 1
+bDoDensity                  = 1
+# Checkpoint/Restart options
+iCheckInterval  		    = 5
+# Time stepping options
+dDelta          		    = 0.1
+nSteps          		    = 20
+dEta            		    = 0.5
+dTheta          		    = 0.5
