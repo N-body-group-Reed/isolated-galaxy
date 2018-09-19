@@ -1,5 +1,5 @@
 # **Recommendations**
-It is recommended that you put a copy of your charmrun and ChaNGa executables in the folder title "code."  This will allow you to run each simulation without copying it to your changa folder.
+It is recommended that you put a copy of your charmrun and ChaNGa executables in the folder title "code."  This method of organizing your folders and executables will allow you to run each simulation without copying it to your changa folder.  It will also allow use to use the Makefile since they are written under this assumption.
 # **Instructions**
 1.  Run the python script init_cond.py using python3.  This should produce a .out file, e.g., halo.out.
 
