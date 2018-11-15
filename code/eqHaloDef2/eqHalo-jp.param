@@ -1,20 +1,31 @@
+# Hash mark indicate sections
+#
 # Load Balancer Options
+#
 bPrefetch			        = 1
 bConcurrentSph			    = 1
+#
 # IO options
+#
 achInFile			        = halo2.out
 achOutName      		    = halo2
 iOutInterval    		    = 4
 iLogInterval    		    = 1
 bDoDensity                  = 1
+#
 # Checkpoint/Restart options
+#
 iCheckInterval  		    = 5
+#
 # Time stepping options
+#
 dDelta          		    = 0.1
 nSteps          		    = 20
 dEta            		    = 0.5
 dTheta          		    = 0.5
+#
 # SPH options
+#
 bDoGas          		    = 1
 bGasAdiabatic 			    = 1
 #bGasIsothermal			    = 1
@@ -23,13 +34,17 @@ dKpcUnit        		    = 1
 dConstGamma     		    = 1.666667
 bSphStep			        = 1
 dEtaCourant			        = 0.4
+#
 # Grow Mass Options
+#
 bDynGrowMass			    = 1
 nGrowMass			        = 1e5
 dGrowDeltaM			        = 10
 dGrowStartT			        = 5
 dGrowEndT			        = 20
+#
 # Movie making test
+#
 dDumpFrameTime              = 1
 dDumpFrameStep              = 5 
 bLiveViz                    = 0
