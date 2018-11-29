@@ -1,1 +1,10 @@
+# Trying to see if more STEPS vs density will make stars based on Herpich 2015a and Roskar 2008.
+#  
+from pyICs.density_profiles import *
+from pyICs.am_profiles import *
+from pyICs.equilibrium_halos import *
+from pyICs.tools import *
 
+sim = EquilibriumHalo(fname = "halo2-g.out", n_particles = 5e5)
+sim.make_halo()
+sim.finalize()
