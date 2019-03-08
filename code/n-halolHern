@@ -1,0 +1,15 @@
+
+    
+# 2019-03-07
+# Goal is to see if spin_parameter and a huge decrease in particle number 
+# can flatten the simulation
+from pyICs.density_profiles import *
+from pyICs.am_profiles import *
+from pyICs.equilibrium_halos import *
+from pyICs.tools import *
+
+sim = EquilibriumHalo(fname = "n-haloHern.out", n_particles = 50e4, spin_parameter = 0.06)
+# spin_parameter has been default at 0.04 until now
+# in the parameter file the integration time was 0.005 and the number of step 50
+sim.make_halo()
+sim.finalize()
