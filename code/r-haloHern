@@ -1,13 +1,13 @@
 # 2019-03-11: p-haloHern was a showed sphere to disk evolutions
-# Goal now is to see how long we can run and 
-# simultaneously lower the spin parameter
+# Goal now is to see how long we can run  
+#
 from pyICs.density_profiles import *
 from pyICs.am_profiles import *
 from pyICs.equilibrium_halos import *
 from pyICs.tools import *
 
-sim = EquilibriumHalo(fname = "r-haloHern.out", n_particles = 10e4, spin_parameter = 0.1)
+sim = EquilibriumHalo(fname = "r-haloHern.out", n_particles = 20e4, spin_parameter = 0.3)
 # spin_parameter has been default at 0.04 until now
-# in the parameter file the integration time was 0.005 and the number of step 50
+# in the parameter file the integration time was 0.006 and the number of step 375
 sim.make_halo()
 sim.finalize()
