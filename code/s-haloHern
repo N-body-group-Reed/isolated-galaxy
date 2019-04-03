@@ -1,0 +1,14 @@
+# 2019-04-03: r-haloHern was the longest run
+# Goal now is to see how the pyICs parameter f_bary effects the early images. 
+# Lowering the spin parameter and increasing ddelta -- in q-haloHere was a disaster
+from pyICs.density_profiles import *
+from pyICs.am_profiles import *
+from pyICs.equilibrium_halos import *
+from pyICs.tools import *
+
+sim = EquilibriumHalo(fname = "s-haloHern.out", n_particles = 20e4, f_bary = 0.01, spin_parameter = 0.3)
+# spin_parameter at 0.3 was good for r-haloHern but r-haloHern.201 had a spin_parameter that was much lower
+# for r-haloHern i will set ddelta to 0.007 and the number of steps to 400
+# for s-haloHern i will keep the ddelta of 0.007, but decrease the number of steps
+sim.make_halo()
+sim.finalize()
