@@ -12,3 +12,7 @@ sim = EquilibriumHalo(fname = "s-haloHern.out", n_particles = 20e4, f_bary = 0.0
 # for s-haloHern i will keep the ddelta of 0.007, but decrease the number of steps
 sim.make_halo()
 sim.finalize()
+#
+# The run time for these ICs, for 100 steps was 2 hrs. for 4 nodes, 96 processors.
+#
+# Getting a taste of scaling for the code document for a Res. Alloc.
