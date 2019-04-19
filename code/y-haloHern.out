@@ -1,0 +1,14 @@
+# 2019-04-17: x-haloHern tested a 720 processor 10 hr run
+# I asked for 700 big steps and got 300
+# Also switch dKpcUnit back to 1 -- partially explained by J. Herpich email
+# Here we test decreasing the n_particles drastically to get to higher Gyrs
+# 
+from pyICs.density_profiles import *
+from pyICs.am_profiles import *
+from pyICs.equilibrium_halos import *
+from pyICs.tools import *
+
+sim = EquilibriumHalo(fname = "y-haloHern.out", n_particles = 10e3, f_bary = 0.1, spin_parameter = 0.3, mu = 5.0)
+#
+sim.make_halo()
+sim.finalize()
