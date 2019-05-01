@@ -1,0 +1,21 @@
+# 2019-05-01: aa-haloHern stopped producing data after 5 minutes -- according to my new monitor progress idea
+# The new idea is to constantly watch the dot-o ... file.  This plan seems to work nicely.
+# aa-haloHern choked at a domain decomposition
+#
+from pyICs.density_profiles import *
+from pyICs.am_profiles import *
+from pyICs.equilibrium_halos import *
+from pyICs.tools import *
+
+sim = EquilibriumHalo(fname = "ab-haloHern.out", n_particles = 20e4, f_bary = 0.01, spin_parameter = 0.3)
+#
+# spin_parameter at 0.3 was good for r-haloHern.
+# Trying to reproduce the t-haloHern results.  aa-haloHern ONLY had n_particles to 1e3.
+# Perhaps there is a detailed and technical reason for number of particles and number of nodes
+#
+sim.make_halo()
+sim.finalize()
+#
+# The run time for these ICs, for 100 steps was 2 hrs. for 4 nodes, 96 processors.
+#
+# Getting a taste of scaling for the code document for a Res. Alloc.
