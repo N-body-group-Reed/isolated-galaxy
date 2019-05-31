@@ -1,0 +1,58 @@
+#Load Balancer Options
+#
+bPrefetch	= 1
+bConcurrentSph	= 1
+#
+#Time stepping options
+#
+dDelta	= 0.006
+nSteps	= 1000
+dEta	= 0.5
+#
+# Force Accuracy Options
+#
+dTheta	= 2.0
+bDoGravity	= 1
+#
+# SPH options
+#
+bDoGas	= 0
+bGasAdiabatic	= 0
+#bFastGas	= 1
+#nSmooth	= 8
+dEtaCourant	= 0.3
+#
+#bGasIsothermal	= 1
+#
+dMsolUnit	= 2.325e5
+dKpcUnit	= 1
+#dConstGamma	= 1.666667
+#
+#SPH Time Stepping
+#
+#bSphStep	= 1
+#dEtaCourant	= 0.3
+#
+# IO options
+#
+achInFile	= noahgasnostars.out
+achOutName	= noahgasnostars
+iOutInterval	= 5
+iLogInterval	= 1
+bDoDensity	= 1
+#
+# Star Forming Options
+#
+bStarForm	= 0
+#
+# Checkpoint/Restart options
+#
+iCheckInterval	= 1
+#
+# Grow Mass Options
+#
+#bDynGrowMass	= 1
+#nGrowMass	= 1e5
+#dGrowDeltaM	= 10
+#dGrowStartT	= 0
+#dGrowEndT	= 50
