@@ -45,6 +45,8 @@ bDoDensity	= 1
 #
 bStarForm	= 1
 #
+# It seems that leaving bStarForm equal to 1, while SPH is turned off is inconsistent -- not exactly sure why.
+#
 # Checkpoint/Restart options
 #
 iCheckInterval	= 1
@@ -56,3 +58,9 @@ iCheckInterval	= 1
 #dGrowDeltaM	= 10
 #dGrowStartT	= 0
 #dGrowEndT	= 50
+
+#2019-06-03 -- note the that the movie making parameters are completely gone
+# Nevertheless, in the group meeting Will made some progress on creating ppm
+# files -- in the context of getting some nasecent spiral arms from a 
+# Noah distribution implemented in pyICs.
+#
