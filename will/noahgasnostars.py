@@ -16,3 +16,4 @@ sim = create_ics(profile = rho,drhodr=drhodr,d2rhodr2=d2rhodr2,fname = "noahgasn
 # not sure how to implement his velocity distribution, so didn't bother in this one
 #sim.make_halo()
 #sim.finalize()
+# Will, excellent that you included this file in the github site thanks.
