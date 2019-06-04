@@ -1,2 +1,0 @@
-Using standard density distribution from pyICs
-# much more detail needed -- some context jp
