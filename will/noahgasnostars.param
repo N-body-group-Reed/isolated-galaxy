@@ -36,6 +36,11 @@ dKpcUnit	= 1
 # IO options
 #
 achInFile	= noahgasnostars.out
+#
+# it's important to document how this important file was created
+# I believe that that "noah" here means that nmuldavin's distribution
+# was coded into pyICS, no?
+#
 achOutName	= noahgasnostars
 iOutInterval	= 5
 iLogInterval	= 1
@@ -44,6 +49,8 @@ bDoDensity	= 1
 # Star Forming Options
 #
 bStarForm	= 0
+#
+# All the SPH parameters are turned off AND bStarForm is set to zero! Good.
 #
 # Checkpoint/Restart options
 #
