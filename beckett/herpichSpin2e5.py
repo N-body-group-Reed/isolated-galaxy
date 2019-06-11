@@ -17,3 +17,4 @@ sim = create_ics(profile = rho,drhodr=drhodr,d2rhodr2=d2rhodr2,fname = "noahgasn
 # distribution rho and particle count ripped from p. 67 of Noah Muldavin's thesis
 # not sure how to implement his velocity distribution, so didn't bother in this one
 # Added cutoff from Noah's thesis, might impact normalization (implemented with heaviside theta)
+# Lowered particle count from 2e6 to 2e5
