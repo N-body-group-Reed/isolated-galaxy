@@ -1,0 +1,69 @@
+#Load Balancer Options
+#
+bPrefetch	= 1
+bConcurrentSph	= 1
+#
+# Parallel Performance Options
+#
+nTreePieces	= 64
+#
+#Time stepping options
+#
+dDelta	= 0.006
+nSteps	= 1000
+dEta	= 0.5
+#
+# Force Accuracy Options
+#
+dTheta	= 2.0
+bDoGravity	= 1
+#
+# SPH options
+#
+bDoGas	= 0
+#bGasAdiabatic	= 1
+#bFastGas	= 1
+#nSmooth	= 8
+dEtaCourant	= 0.3
+#
+#bGasIsothermal	= 1
+#
+dMsolUnit	= 2.325e5
+dKpcUnit	= 1
+#dConstGamma	= 1.666667
+#
+#SPH Time Stepping
+#
+bSphStep	= 1
+dEtaCourant	= 0.3
+#
+# IO options
+#
+achInFile	= noahgasnostars.out
+#
+# it's important to document how this important file was created
+# I believe that that "noah" here means that nmuldavin's distribution
+# was coded into pyICS, no?
+#
+achOutName	= noahgasnostars
+iOutInterval	= 50
+iLogInterval	= 1
+bDoDensity	= 1
+#
+# Star Forming Options
+#
+#bStarForm	= 1
+#
+# All the SPH parameters are turned off AND bStarForm is set to zero! Good.
+#
+# Checkpoint/Restart options
+#
+iCheckInterval	= 1
+#
+# Grow Mass Options
+#
+#bDynGrowMass	= 1
+#nGrowMass	= 1e5
+#dGrowDeltaM	= 10
+#dGrowStartT	= 0
+#dGrowEndT = 50
